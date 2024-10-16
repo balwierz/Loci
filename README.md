@@ -21,6 +21,8 @@ What I want to achieve with this package is to
 - No internal string operations: no spurious parsing or deparsing anything
 - Efficient coverage computation
 - Remove GenomicRangesList in favour of simple Python lists
+- Drop names of loci. There can be a name column of course.
+- Allow for 0-length loci representing particular phosphodiester bonds (-p-) between nucleotides. For instance to represent CRISPR cut sites, recombination points, TSSs etc.
 
 # Name
 Loci is a plural nominative of Latin noun locus meaning place. This word is commonly used by genomicists (and all biologists) to refer to contiguous pieces of DNA. Pronunciation is according to Classical Latin /ˈlo.kiː/, not the English pronunciation /ˈloʊsaɪ/, nor German /lotsi/.
