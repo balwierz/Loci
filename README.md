@@ -7,7 +7,7 @@ In Python there not even have been an implementation of the critical overlap-com
 
 `PyRanges` has very little functions implemented, but is based on Pandas, so familiar to Python programmers. There is also `pyBedTools` which is not really a Python solution but a set of wrappers of syscalls to `bedtools`, and it has on-disk operation mode (slow).
 
-I turned to `GenomicRanges` and started using them, but very quickly ran into various bugs, which I had to fix in the package to compute very basic things. After 3 days of struggle I finally realised that there was a bug in joining two objects (which was called by almost all interval algebra functions). So all the results I computed were wrong. At this point I stopped bug-reporting and decided to clone the repo and work on my own.
+I turned to `GenomicRanges` and started using them, but very quickly ran into various bugs, which I had to fix in the package to compute very basic things. After 3 days of struggle I finally realised that there was a bug in joining two objects (which was called by almost all interval algebra functions). So all the results I computed so far were wrong. At this point I stopped bug-reporting and decided to clone the repo and work on my own.
 
 # Desiderata
 What I want to achieve with this package is to
