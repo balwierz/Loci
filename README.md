@@ -11,14 +11,17 @@ I turned to `GenomicRanges` and started using them, but very quickly ran into va
 
 # Desiderata
 What I want to achieve with this package is to
-- Port to Pandas: remove mcols, BiocFrames. All additional columns will be Pandas DataFrames
-- Implement import and export functions to read/write data in various formats without using other packages
+- Port to Pandas: remove mcols, BiocFrames. All additional columns will be Pandas DataFrames.
+- Implement import and export functions to read/write data in various formats without using other packages. Imports from warious formats should be done with single function: the constructor.
 - Reduce screen space for viewing Loci and for coding: abbreviations for columns and for function names, e.g. use 3-character names: chr, beg, end, str for chromosome, beginning, end and strand.
-- Deal properly with chromosome lenghts: every Loci object
+- Deal properly with chromosome lenghts: every Loci object must have a genome assigned. This should be as simple as adding "hg38" as an argument to the constructor.
 - Only one genome per object. There is no point of having separate genomes for each locus.
-- Pretty-printing in Jupyter and in command line
+- Pretty-printing space-savvy in Jupyter and in command line
 - Metadata columns can be accessed directly with `[]`
+- No internal string operations: no spurious parsing or deparsing anything
+- Efficient coverage computation
+- Remove GenomicRangesList in favour of simple Python lists
 
 # Name
-Loci is a plural nominative of a Latin noun Locus meaning place. This word is commonly used by genomicists (and all biologists) to refer to contiguous pieces of DNA. Pronunciation is according to Classical Latin /ˈlo.kiː/, not the English pronunciation /ˈloʊsaɪ/, nor German /lotsi/.
+Loci is a plural nominative of Latin noun locus meaning place. This word is commonly used by genomicists (and all biologists) to refer to contiguous pieces of DNA. Pronunciation is according to Classical Latin /ˈlo.kiː/, not the English pronunciation /ˈloʊsaɪ/, nor German /lotsi/.
 
